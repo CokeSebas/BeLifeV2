@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeLifeV2", "BeLifeV2\BeLifeV2.csproj", "{7B2635C6-90B9-4246-A614-0C47A923F329}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibbClass", "LibbClass\LibbClass.csproj", "{EC8A6C3B-F6CB-4CD0-A398-2DF6A8108E21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7B2635C6-90B9-4246-A614-0C47A923F329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B2635C6-90B9-4246-A614-0C47A923F329}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B2635C6-90B9-4246-A614-0C47A923F329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8A6C3B-F6CB-4CD0-A398-2DF6A8108E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8A6C3B-F6CB-4CD0-A398-2DF6A8108E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8A6C3B-F6CB-4CD0-A398-2DF6A8108E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8A6C3B-F6CB-4CD0-A398-2DF6A8108E21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
