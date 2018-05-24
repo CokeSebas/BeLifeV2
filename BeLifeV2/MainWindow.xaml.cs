@@ -27,6 +27,7 @@ namespace BeLifeV2
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }
