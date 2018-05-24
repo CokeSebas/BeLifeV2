@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeLifeV2"
         mc:Ignorable="d"
-        Title="editarCliente" Height="450" Width="800">
+         Title="Modificar Datos Cliente" Height="410" Width="582.4">
     <Grid>
         
     </Grid>
