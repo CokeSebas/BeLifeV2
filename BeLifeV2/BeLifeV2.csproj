@@ -140,5 +140,11 @@
     <Resource Include="Images\Edit_clie.png" />
     <Resource Include="Images\Limpiar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibbClass\LibbClass.csproj">
+      <Project>{ec8a6c3b-f6cb-4cd0-a398-2df6a8108e21}</Project>
+      <Name>LibbClass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
