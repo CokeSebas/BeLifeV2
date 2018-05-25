@@ -15,6 +15,7 @@ namespace LibbClas
         private string _sexo;
         private string _estadoCivil;
 
+
         public string Rut{
             get
             {
