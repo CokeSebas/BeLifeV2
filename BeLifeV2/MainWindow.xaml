@@ -9,9 +9,10 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <!--<Grid>
+    
+    <!--Grid>
         <Button Content="Button" HorizontalAlignment="Left" Height="30" Margin="210,75,0,0" VerticalAlignment="Top" Width="50" Click="Button_Click"/>
-    </Grid>-->
+    </-->
 
     <Canvas>
         <StackPanel Panel.ZIndex="2" Style="{StaticResource spSlideLeft}" x:Name="spLeft" Background="#2D3446" Width="200" Margin="-150,0,0,0">
@@ -24,7 +25,7 @@
                 <Image Source="images/icons/progress.png" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="14,10,10,10" />
             </DockPanel>
             <DockPanel VerticalAlignment="Center" HorizontalAlignment="Right" Width="200" >
-                <Label Style="{DynamicResource MenuLabel}" Content="Lstar Clientes" Width="140" VerticalAlignment="Center" FontFamily="Source Sans Pro"/>
+                <Label Style="{DynamicResource MenuLabel}" Content="Lstar Clientes" Width="140" VerticalAlignment="Center" FontFamily="Source Sans Pro" />
                 <Image Source="images/icons/progress.png" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="14,10,10,10" />
             </DockPanel>
         </StackPanel>
