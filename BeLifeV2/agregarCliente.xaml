@@ -15,7 +15,7 @@
     
 >
     <Grid>
-        <Label Content="RUN Cliente:" HorizontalAlignment="Left" Margin="29,60,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
+        <Label Content="RUN Cliente:" HorizontalAlignment="Left"  Margin="29,60,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
         <TextBox  Controls:TextBoxHelper.Watermark="RUN sin puntos y con guion" HorizontalAlignment="Left" Height="26" Margin="161,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="198"  Controls:TextBoxHelper.ClearTextButton="True"/>
         <Label Content="Nombre Cliente:" HorizontalAlignment="Left" Margin="29,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.711,0.5" Height="26" Width="96" Grid.ColumnSpan="2"/>
         <TextBox Controls:TextBoxHelper.Watermark="Nombres cliente" HorizontalAlignment="Left" Height="26" Margin="161,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="170" Controls:TextBoxHelper.ClearTextButton="True"/>

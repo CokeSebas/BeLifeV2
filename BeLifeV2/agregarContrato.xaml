@@ -15,7 +15,7 @@
     
 >
     <Grid>
-        <Button x:Name="btnGuardarCont" Content="Guardar Contrato" HorizontalAlignment="Left" Margin="16,587,0,-204" VerticalAlignment="Top" Width="120" Height="35" Click="btnGuardarCont_Click" Style="{StaticResource AccentedSquareButtonStyle}" />
+        <Button x:Name="btnGuardarCont"  Content="Guardar Contrato" HorizontalAlignment="Left" Margin="16,587,0,-204" VerticalAlignment="Top" Width="120" Height="35" Click="btnGuardarCont_Click" Style="{StaticResource AccentedSquareButtonStyle}" />
         <Label x:Name="label4" Content="Fecha Inicio Vigencia" HorizontalAlignment="Left" Margin="16,222,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label7" Content="Declaracion de Salud" HorizontalAlignment="Left" Margin="17,281,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label8" Content="Prima Anual" HorizontalAlignment="Left" Margin="17,341,0,0" VerticalAlignment="Top"/>
