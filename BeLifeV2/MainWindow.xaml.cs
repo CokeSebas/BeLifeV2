@@ -32,11 +32,9 @@ namespace BeLifeV2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BeLifeV2.editarCliente miventana = new BeLifeV2.editarCliente();
-
-            //miventana.owner = this; ;
-            //this.Close();
-            miventana.ShowDialog();
+            ListarCliente listCli = new ListarCliente();
+            listCli.Owner = this;
+            listCli.ShowDialog();
         }
     }
 }
