@@ -158,7 +158,36 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\listar cliente.png" />
+    <Resource Include="Images\listar_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bus_Contrato.png" />
+    <Resource Include="Images\Delete_clie.png" />
+    <Resource Include="Images\Edit_contrato.png" />
+    <Resource Include="Images\edit_cto.png" />
+    <Resource Include="Images\icono_main.png" />
+    <Resource Include="Images\Listar_clie.png" />
+    <Resource Include="Images\Salir.png" />
+    <Resource Include="Images\Salir_cto.png" />
+    <Resource Include="Images\Terminar_cto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\contratos\contr01.jpg" />
+    <Resource Include="Images\contratos\contr02.jpg" />
+    <Resource Include="Images\contratos\contr03.jpg" />
+    <Resource Include="Images\contratos\contr04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add_User.png" />
+    <Resource Include="Images\Contact_Add-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\mnu_add_clie.png" />
+    <Resource Include="Images\menu\mnu_add_cto.png" />
+    <Resource Include="Images\menu\mnu_edit_clie.png" />
+    <Resource Include="Images\menu\mnu_edit_cto.png" />
+    <Resource Include="Images\menu\mnu_list_clie.png" />
+    <Resource Include="Images\menu\mnu_list_cto.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

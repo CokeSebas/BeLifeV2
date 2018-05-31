@@ -149,6 +149,7 @@ namespace BeLifeV2
             {
                 await this.ShowMessageAsync("Advertencia!", "El RUT " + rut + " no ha sido ingresado");
             }
+            //await this.ShowMessageAsync("Advertencia!", "El RUT " + rut + " no ha sido ingresado");
         }
 
         public async Task eliminarClienteAsync()
@@ -188,7 +189,7 @@ namespace BeLifeV2
 
         private void btnBuscarCli_Click(object sender, RoutedEventArgs e)
         {
-
+            buscarClienteAsync();
         }
 
         private void cbbEC_SelectionChanged(object sender, SelectionChangedEventArgs e)
