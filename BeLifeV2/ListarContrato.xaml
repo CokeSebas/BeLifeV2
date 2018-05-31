@@ -7,7 +7,8 @@
                       
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="BeLife - Listar Contratos" Height="535.458" Width="743.825">
+        Title="BeLife - Listar Contratos" Height="535.458" Width="743.825"
+        Icon="Images/listar cliente.png">
     <Grid>
         <Rectangle HorizontalAlignment="Left" Height="91" Margin="224,388,0,0" VerticalAlignment="Top" Width="327" Stroke="#FF41B1E1"/>
         <GroupBox Header="Datos del Contrato" HorizontalAlignment="Left" Height="126" Margin="10,16,0,0" VerticalAlignment="Top" Width="714"/>
