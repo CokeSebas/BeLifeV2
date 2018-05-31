@@ -134,14 +134,49 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Bus_clie.png" />
-    <Resource Include="Images\Edit_clie.png" />
-    <Resource Include="Images\Limpiar.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibbClass\LibbClass.csproj">
       <Project>{ec8a6c3b-f6cb-4cd0-a398-2df6a8108e21}</Project>
       <Name>LibbClass</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Delete_clie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Edit_clie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Listar_clie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit_cto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bus_Contrato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Edit_contrato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Terminar_cto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Salir_cto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icono_main.png" />
+    <Resource Include="Images\contratos\contr01.jpg" />
+    <Resource Include="Images\contratos\contr02.jpg" />
+    <Resource Include="Images\contratos\contr03.jpg" />
+    <Content Include="Images\contratos\contr04.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
