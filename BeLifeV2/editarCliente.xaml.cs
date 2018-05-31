@@ -76,7 +76,8 @@ namespace BeLifeV2
 
             cbbSexo.SelectedIndex = 0;
             cbbSexo.Items.Add("Seleccione");
-            for (int i = 0; i < listSex.Length; i++){
+            for (int i = 0; i < listSex.Length; i++)
+            {
                 cbbSexo.Items.Add(listSex[i]);
             }
 
@@ -84,14 +85,17 @@ namespace BeLifeV2
 
             cbbEC.SelectedIndex = 0;
             cbbEC.Items.Add("Seleccione");
-            for (int x = 0; x < listEC.Length; x++){
+            for (int x = 0; x < listEC.Length; x++)
+            {
                 cbbEC.Items.Add(listEC[x]);
             }
 
         }
 
-        public async Task editarClienteAsync(){
-            try{
+        public async Task editarClienteAsync()
+        {
+            try
+            {
                 bool edita = false;
                 string nombre = txtNombCli.Text;
                 string apellido = txtApCli.Text;
@@ -108,23 +112,30 @@ namespace BeLifeV2
                 objCli.Sexo = sexo;
 
                 edita = objCli.editarCliente(rut);
-                if (edita == true){
+                if (edita == true)
+                {
                     await this.ShowMessageAsync("Cliente Editado", "Confirmacion!");
                     limpiar();
                     desactivarOpciones();
-                }else{
+                }
+                else
+                {
                     await this.ShowMessageAsync("Editar Cliente", "Error!");
                 }
-            }catch (Exception error){
+            }
+            catch (Exception error)
+            {
                 await this.ShowMessageAsync("Editar Cliente", error.Message);
             }
         }
 
-        public async Task buscarClienteAsync(){
+        public async Task buscarClienteAsync()
+        {
             string rut = txtRutCli.Text;
             string[] datos;
             bool valida = objCli.validar("Cliente", rut);
-            if (valida == false){
+            if (valida == false)
+            {
                 datos = conec.getDatosCliente(rut);
                 txtNombCli.Text = datos[0];
                 txtApCli.Text = datos[1];
@@ -133,22 +144,28 @@ namespace BeLifeV2
                 cbbSexo.SelectedIndex = int.Parse(datos[3]);
                 cbbEC.SelectedIndex = int.Parse(datos[4]);
                 activarOpciones();
-            }else{
+            }
+            else
+            {
                 await this.ShowMessageAsync("Advertencia!", "El RUT " + rut + " no ha sido ingresado");
             }
         }
 
-        public async Task eliminarClienteAsync(){
+        public async Task eliminarClienteAsync()
+        {
             bool elimina = false;
             string rut = txtRutCli.Text;
             objCli.Rut = rut;
 
-            if (objCli.clienteContrato(rut) == true){
+            if (objCli.clienteContrato(rut) == true)
+            {
                 elimina = objCli.eliminarCliente(rut);
                 await this.ShowMessageAsync("Confirmación!", "Cliente Elimnado");
                 limpiar();
                 desactivarOpciones();
-            }else{
+            }
+            else
+            {
                 await this.ShowMessageAsync("Advetencia!", "El cliente tiene un contrato en vigencia, no se puede eliminar");
             }
         }
