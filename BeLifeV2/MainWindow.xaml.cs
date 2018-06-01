@@ -59,7 +59,9 @@ namespace BeLifeV2
 
         private void btn_agregar_contrato_Click(object sender, RoutedEventArgs e)
         {
-
+            anadirCont anaCont = new anadirCont();
+            anaCont.Owner = this;
+            anaCont.ShowDialog();
         }
 
         private void btn_editar_cliente_Click(object sender, RoutedEventArgs e)
@@ -71,7 +73,9 @@ namespace BeLifeV2
 
         private void btn_agregar_cliente_Click(object sender, RoutedEventArgs e)
         {
-
+            agregarCliente addCli = new agregarCliente();
+            addCli.Owner = this;
+            addCli.ShowDialog();
         }
     }
 }
