@@ -15,7 +15,7 @@
         <ComboBox x:Name="cbbRutCli" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Seleccione Rut" Margin="45,51,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="cbbRutCli_SelectionChanged"/>
         <ComboBox x:Name="cbbPlan" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Tipo de Plan" Margin="45,130,0,0" VerticalAlignment="Top" Width="143" SelectionChanged="cbbPlan_SelectionChanged" IsEnabled="False"/>
         <ComboBox x:Name="cbbSalud" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Declara Salud?" Margin="459,130,0,0" VerticalAlignment="Top" Width="150" IsEnabled="False" SelectionChanged="cbbSalud_SelectionChanged"/>
-        <ComboBox x:Name="cbbListaContrato" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Nro Contrato" Margin="505,51,0,0" VerticalAlignment="Top" Width="135" SelectionChanged="cbbListaContrato_SelectionChanged" />
+        <ComboBox x:Name="cbbListaContrato" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Nro Contrato" Margin="505,51,0,0" VerticalAlignment="Top" Width="179" SelectionChanged="cbbListaContrato_SelectionChanged" />
         <TextBox x:Name="txtNombreCliCon" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Nombre del Cliente" Height="23" Margin="219,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" IsEnabled="False" TextChanged="txtNombreCliCon_TextChanged"/>
         <TextBox x:Name="txtPoliza" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Datos de Póliza" Height="23" Margin="218,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" TextChanged="txtPoliza_TextChanged"/>
         <Label x:Name="label7" Content="Declaracion de Salud:" HorizontalAlignment="Left" Margin="459,104,0,0" VerticalAlignment="Top"/>
@@ -25,7 +25,7 @@
         <Label Content="Poliza" HorizontalAlignment="Left" Margin="240,101,0,0" VerticalAlignment="Top" Width="86"/>
 
         <StackPanel>
-            <Button x:Name="btnBuscarCto" HorizontalAlignment="Left" Style="{DynamicResource MetroWindowButtonStyle}"  Width="90" Height="40" Margin="765,30,0,0" VerticalAlignment="Top" >
+            <Button x:Name="btnBuscarCto" HorizontalAlignment="Left" Style="{DynamicResource MetroWindowButtonStyle}"  Width="90" Height="40" Margin="765,30,0,0" VerticalAlignment="Top" Click="btnBuscarCto_Click" >
                 <Button.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -38,7 +38,7 @@
             </Button>
 
 
-            <Button x:Name="btnEditarCont" HorizontalAlignment="Left" Style="{DynamicResource MetroWindowButtonStyle}" Width="90" Height="40" Margin="765,30,0,0" VerticalAlignment="Top" >
+            <Button x:Name="btnEditarCont" HorizontalAlignment="Left" Style="{DynamicResource MetroWindowButtonStyle}" Width="90" Height="40" Margin="765,30,0,0" VerticalAlignment="Top" Click="btnEditarCont_Click" >
                 <Button.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -51,7 +51,7 @@
             </Button>
 
 
-            <Button x:Name="btnTerminarContrato" HorizontalAlignment="Left" Style="{DynamicResource MetroWindowButtonStyle}" Width="90" Height="40" Margin="765,30,0,0" VerticalAlignment="Top" >
+            <Button x:Name="btnTerminarContrato" HorizontalAlignment="Left" Style="{DynamicResource MetroWindowButtonStyle}" Width="90" Height="40" Margin="765,30,0,0" VerticalAlignment="Top" Click="btnTerminarContrato_Click" >
                 <Button.ToolTip>
                     <ToolTip>
                         <StackPanel>
@@ -89,14 +89,14 @@
 
 
         <Label x:Name="lbl_prima_anual" Content="Prima Anual:" HorizontalAlignment="Left" Height="25" Margin="70,214,0,347" Width="85"/>
-        <TextBox x:Name="txtPrimaAnu" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Valor Prima Anual" Height="15" Margin="69,252,0,323" TextWrapping="Wrap" Width="119">
+        <TextBox x:Name="txtPrimaAnu" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Valor Prima Anual" IsEnabled="False" Height="15" Margin="69,252,0,323" TextWrapping="Wrap" Width="119">
             <TextBox.BitmapEffect>
                 <OuterGlowBitmapEffect GlowColor="Blue" GlowSize="5" />
             </TextBox.BitmapEffect>
         </TextBox>
 
         <Label x:Name="lbl_prima_mensual" Content="Prima Mensual:" HorizontalAlignment="Left" Height="25" Width="91" Margin="230,215,0,346"/>
-        <TextBox x:Name="txtPrimaMen" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Valor Prima Mensual" Height="15" Margin="218,252,0,323" TextWrapping="Wrap" Width="127"/>
+        <TextBox x:Name="txtPrimaMen" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Valor Prima Mensual" Height="15" Margin="218,252,0,323" IsEnabled="False" TextWrapping="Wrap" Width="127"/>
         <Label Content="Observaciones del Contrato" HorizontalAlignment="Left" Margin="402,221,0,355" Width="158"/>
         <TextBox x:Name="txtObsv" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Escriba sus Observaciones" Margin="380,248,0,323" TextWrapping="Wrap" Width="355">
             <TextBox.BitmapEffect>

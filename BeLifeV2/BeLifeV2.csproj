@@ -189,5 +189,8 @@
     <Resource Include="Images\menu\mnu_list_clie.png" />
     <Resource Include="Images\menu\mnu_list_cto.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu\Logo_BeLife.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

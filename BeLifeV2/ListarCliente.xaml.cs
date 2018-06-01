@@ -127,10 +127,10 @@ namespace BeLifeV2
                 string sexo = objCli.Sexo;
                 string estC = objCli.EstadoCivil;
                 string fecN = objCli.FechaNacimiento;
-                //editarCliente edCli = new editarCliente(nom, ap, rut, sexo, estC, fecN);
+                editarCliente edCli = new editarCliente(nom, ap, rut, sexo, estC, fecN);
                 this.Hide();
-                //edCli.Owner = this;
-                //edCli.Show();
+                edCli.Owner = this;
+                edCli.Show();
             }
         }
 

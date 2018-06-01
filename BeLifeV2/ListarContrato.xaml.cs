@@ -46,8 +46,8 @@ namespace BeLifeV2
         public ListarContrato()
         {
             InitializeComponent();
-            listCombo();
 
+            listCombo();
             contratos = conec.ListarContratos();
             dtgContrato.ItemsSource = contratos;
             Largo = contratos.Count();
@@ -100,10 +100,10 @@ namespace BeLifeV2
                     string obs = objCont.Observaciones;
                     string fecIni = objCont.FechaInicioVigencia;
 
-                    /*editarContrato edCont = new editarContrato(num, rut, plan, salud, primaAn, primaMe, obs);
+                    editarContrato edCont = new editarContrato(num, rut, plan, salud, primaAn, primaMe, obs);
                     this.Hide();
                     edCont.Owner = this;
-                    edCont.Show();*/
+                    edCont.Show();
                 }
                 catch (Exception)
                 {

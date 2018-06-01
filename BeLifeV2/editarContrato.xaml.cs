@@ -26,66 +26,12 @@ namespace BeLifeV2
     {
         DispatcherTimer timer;
         System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
-               
-
-        int ctr = 0;
-        public editarContrato()
-        {
-            InitializeComponent();
-            timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 2);
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
-
-            ctr = 1;
-            PlaySlideShow(ctr);
-        }
-
-        void timer_Tick(object sender, EventArgs e)
-        {
-            ctr++;
-            if (ctr > 6)
-            {
-                ctr = 1;
-            }
-            PlaySlideShow(ctr);
-        }
-
-        private void cbbPlan_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void cbbListaContrato_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void cbbSalud_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void cbbRutCli_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void txtNombreCliCon_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txtPoliza_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         public Conexion conec = new Conexion();
         public Contrato objCont = new Contrato();
         public Cliente objCli = new Cliente();
 
-            private int _edad;
+        private int _edad;
         private int _estadoC;
         private int _sexo;
         private double _primaBase;
@@ -142,7 +88,52 @@ namespace BeLifeV2
             }
         }
 
-       
+        int ctr = 0;
+        public editarContrato()
+        {
+            InitializeComponent();
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 2);
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Start();
+
+            ctr = 1;
+            PlaySlideShow(ctr);
+
+            listCombo();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+        }
+
+        public editarContrato(string numero, string rut, string plan, string salud, string primaAn, string primaMen, string obs)
+        {
+            InitializeComponent();
+
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 2);
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Start();
+
+            ctr = 1;
+            PlaySlideShow(ctr);
+
+            listCombo();
+
+            cbbRutCli.SelectedValue = rut;
+            cbbListaContrato.SelectedValue = numero;
+            dataCliente();
+            buscarContrato();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            ctr++;
+            if (ctr > 6)
+            {
+                ctr = 1;
+            }
+            PlaySlideShow(ctr);
+        }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -159,7 +150,7 @@ namespace BeLifeV2
             image.EndInit();
             myImage.Source = image;
             myImage.Stretch = Stretch.Uniform;
-        
+
         }
 
         public void listCombo()
@@ -223,19 +214,19 @@ namespace BeLifeV2
                 cbbSalud.SelectedIndex = 2;
             }
 
-            /*txtPrimaAnu.Text = datos[5];
+            txtPrimaAnu.Text = datos[5];
             txtPrimaMen.Text = datos[6];
-            txtObsv.Text = datos[7];*/
+            txtObsv.Text = datos[7];
             activarOpciones();
         }
 
         public void activarOpciones()
         {
-            //btnEditarCont.IsEnabled = true;
-            //btnTerminarContrato.IsEnabled = true;
+            btnEditarCont.IsEnabled = true;
+            btnTerminarContrato.IsEnabled = true;
             cbbPlan.IsEnabled = true;
             cbbSalud.IsEnabled = true;
-            //txtObsv.IsEnabled = true;
+            txtObsv.IsEnabled = true;
         }
 
         public void desactivarOpciones()
@@ -246,7 +237,7 @@ namespace BeLifeV2
             cbbPlan.IsEnabled = false;
             //dtpFechaInicio.IsEnabled = false;
             cbbSalud.IsEnabled = false;
-            //txtObsv.IsEnabled = false;
+            txtObsv.IsEnabled = false;
         }
 
         public void limpiar()
@@ -257,13 +248,13 @@ namespace BeLifeV2
             cbbPlan.SelectedIndex = 0;
             txtPoliza.Clear();
             cbbSalud.SelectedIndex = 0;
-            /*txtPrimaMen.Clear();
+            txtPrimaMen.Clear();
             txtPrimaAnu.Clear();
-            txtObsv.Clear();*/
+            txtObsv.Clear();
         }
 
         //funcion se agrega en el onchange del cbbPlan
-            public void calcularPlan()
+        public void calcularPlan()
         {
             string plan = cbbPlan.SelectedItem.ToString();
             string[] datosPoliza = conec.datosPoliza(plan);
@@ -310,8 +301,8 @@ namespace BeLifeV2
 
             recargoBase = PrimaBase;
             total = recargoBase + recargoEdad + recargoSexo + recargoEstadoC;
-            /*txtPrimaAnu.Text = total.ToString();
-            txtPrimaMen.Text = Math.Round((total / 12), 2).ToString();*/
+            txtPrimaAnu.Text = total.ToString();
+            txtPrimaMen.Text = Math.Round((total / 12), 2).ToString();
         }
 
         public async Task editarContAsync()
@@ -335,15 +326,19 @@ namespace BeLifeV2
             string observacion = txtObsv.Text;
             objCont.CodigoPlan = plan;
             objCont.DeclaracionSalud = salud;
-            /*objCont.PrimaAnual = primaAnu;
+            objCont.PrimaAnual = primaAnu;
             objCont.PrimaMensual = primaMen;
-            objCont.Observaciones = observacion;*/
+            objCont.Observaciones = observacion;
             objCont.NumeroContrato = numero;
             edita = objCont.editarContrato();
             if (edita == true)
             {
                 await this.ShowMessageAsync("Confirmacion!", "Contrato Modificado");
                 limpiar();
+            }
+            else
+            {
+                await this.ShowMessageAsync("Error!", "Contrato no se pudo modificafr");
             }
         }
 
@@ -366,9 +361,69 @@ namespace BeLifeV2
             }
         }
 
-        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        public void dataCliente()
+        {
+            cbbListaContrato.Items.Clear();
+            string rut = cbbRutCli.SelectedValue.ToString();
+            string[] listCont = conec.listContratos(rut);
+            cbbListaContrato.SelectedIndex = 0;
+            //cbbRutCli.Items.Add("Seleccione");
+            for (int i = 0; i < listCont.Length; i++)
+            {
+                cbbListaContrato.Items.Add(listCont[i]);
+            }
+            string[] datos = conec.getDatosCliente(rut);
+            txtNombreCliCon.Text = datos[0] + " " + datos[1];
+        }
+
+        private void cbbPlan_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            calcularPlan();
+        }
+
+        private void cbbListaContrato_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void cbbSalud_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void cbbRutCli_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dataCliente();
+        }
+
+        private void txtNombreCliCon_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtPoliza_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }  
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnBuscarCto_Click(object sender, RoutedEventArgs e)
+        {
+            buscarContrato();
+        }
+
+        private void btnEditarCont_Click(object sender, RoutedEventArgs e)
+        {
+            editarContAsync();
+        }
+
+        private void btnTerminarContrato_Click(object sender, RoutedEventArgs e)
+        {
+            terminarContAsync();
         }
     }
 }

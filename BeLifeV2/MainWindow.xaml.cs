@@ -38,9 +38,9 @@ namespace BeLifeV2
         }
 
         private void btn_editar_cotrato_Click(object sender, RoutedEventArgs e){
-            editarCliente edClie = new editarCliente();
-            edClie.Owner = this;
-            edClie.ShowDialog();
+            ListarCliente listCli = new ListarCliente();
+            listCli.Owner = this;
+            listCli.ShowDialog();
         }
 
         private void btn_editar_contrato_Click(object sender, RoutedEventArgs e)
@@ -58,6 +58,18 @@ namespace BeLifeV2
         }
 
         private void btn_agregar_contrato_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_editar_cliente_Click(object sender, RoutedEventArgs e)
+        {
+            editarCliente editCli = new editarCliente();
+            editCli.Owner = this;
+            editCli.ShowDialog();
+        }
+
+        private void btn_agregar_cliente_Click(object sender, RoutedEventArgs e)
         {
 
         }

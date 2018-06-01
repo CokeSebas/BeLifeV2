@@ -26,11 +26,27 @@
         <StackPanel Grid.ColumnSpan="2">
             <Button x:Name="btnListarCli"  HorizontalAlignment="Left" Margin="735,244,0,0" VerticalAlignment="Top" Width="60" Height="38" Click="btnListarCli_Click">
                 <Image Source="/Images/Listar_clie.png" Height="28" Width="35" />
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold"><Run Text="Listar Cliente"/></TextBlock>
+                            <TextBlock><Run Text="Función para Listar los Clientes agregados."/></TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
             </Button>
         </StackPanel>
         <StackPanel Grid.ColumnSpan="2">
             <Button x:Name="btnCerrar" HorizontalAlignment="Left" Margin="735,293,0,0" VerticalAlignment="Top" Width="60" Height="38" Click="btnCerrar_Click">
                 <Image Source="/Images/Salir.png" Height="28" Width="35" />
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold"><Run Text="Cerrar"/></TextBlock>
+                            <TextBlock><Run Text="Cierra la ventana actual."/></TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
             </Button>
         </StackPanel>
 
@@ -42,17 +58,41 @@
         <StackPanel Grid.ColumnSpan="2">
             <Button x:Name="btnEditarCli"  HorizontalAlignment="Left" Margin="735,141,0,0" VerticalAlignment="Top"  Width="60" Height="38" Click="btnEditarCli_Click" IsEnabled="False" >
                 <Image Source="/Images/Edit_clie.png" Height="28" Width="35" />
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold"><Run Text="Editar Cliente"/></TextBlock>
+                            <TextBlock><Run Text="Al presionar edita la información del Cliente seleccionado."/></TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
             </Button>
         </StackPanel>
 
         <StackPanel Grid.ColumnSpan="2">
             <Button x:Name="btnLimpiarCli" HorizontalAlignment="Left" Margin="735,89,0,0" VerticalAlignment="Top"  Width="60" Height="38" Click="btnLimpiarCli_Click" >
                 <Image Source="/Images/Limpiar.png" Height="28" Width="35" />
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold"><Run Text="Limpiar"/></TextBlock>
+                            <TextBlock><Run Text="Limpiar los datos ingreasdos en esta vista."/></TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
             </Button>
         </StackPanel>
 
         <StackPanel Grid.ColumnSpan="2">
             <Button x:Name="btnBuscarCli"  HorizontalAlignment="Left" Margin="735,28,0,0" VerticalAlignment="Top" Width="60" Click="btnBuscarCli_Click" Height="38" >
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold"><Run Text="Buscar Cliente"/></TextBlock>
+                            <TextBlock><Run Text="Al presionar busca la información del RUT ingresado."/></TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
                 <Image Source="/Images/Bus_clie.png" Height="28" Width="35" />
             </Button>
         </StackPanel>
@@ -60,6 +100,14 @@
         <StackPanel Grid.ColumnSpan="2">
             <Button x:Name="btnEliminarCli" HorizontalAlignment="Left" Margin="735,187,34,161" VerticalAlignment="Top" Width="60" Height="38" Click="btnEliminarCli_Click" IsEnabled="False">
                 <Image Source="/Images/delete_clie.png" Height="28" Width="35" />
+                <Button.ToolTip>
+                    <ToolTip>
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold"><Run Text="Eliminar Cliente"/></TextBlock>
+                            <TextBlock><Run Text="Al presionar elimina la información del Cliente seleccionado."/></TextBlock>
+                        </StackPanel>
+                    </ToolTip>
+                </Button.ToolTip>
             </Button>
 
         </StackPanel>

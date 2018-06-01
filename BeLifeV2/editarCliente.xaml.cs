@@ -39,6 +39,47 @@ namespace BeLifeV2
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
+        public editarCliente(string nombre, string apellido, string rut, string sexo, string estado, string fecha)
+        {
+            InitializeComponent();
+            LlenarCombo();
+            txtNombCli.Text = nombre;
+            txtRutCli.Text = rut;
+            txtApCli.Text = apellido;
+
+            if (sexo == "Masculino")
+            {
+                cbbSexo.SelectedIndex = 1;
+            }
+            else if (sexo == "Femenino")
+            {
+                cbbSexo.SelectedIndex = 2;
+            }
+
+            if (estado == "Soltero")
+            {
+                cbbEC.SelectedIndex = 1;
+            }
+            else if (estado == "Casado")
+            {
+                cbbEC.SelectedIndex = 2;
+            }
+            else if (estado == "Divorciado")
+            {
+                cbbEC.SelectedIndex = 3;
+            }
+            else if (estado == "Viudo")
+            {
+                cbbEC.SelectedIndex = 4;
+            }
+
+            dtpFechaNacCli.DisplayDate = Convert.ToDateTime(fecha);
+            dtpFechaNacCli.SelectedDate = Convert.ToDateTime(fecha);
+            //limpiar();
+            activarOpciones();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+        }
+
         public void activarOpciones(){
             txtRutCli.IsEnabled = false;
             btnEditarCli.IsEnabled = true;
@@ -204,27 +245,32 @@ namespace BeLifeV2
 
         private void btnEditarCli_Click(object sender, RoutedEventArgs e)
         {
-
+            editarClienteAsync();
         }
 
         private void btnEliminarCli_Click(object sender, RoutedEventArgs e)
         {
-
+            eliminarClienteAsync();
         }
 
         private void btnLimpiarCli_Click(object sender, RoutedEventArgs e)
         {
-
+            limpiar();
         }
 
         private void btnListarCli_Click(object sender, RoutedEventArgs e)
         {
+            ListarCliente listCli = new ListarCliente();
 
+            //listCli.Owner = this;
+            this.Hide();
+            listCli.ShowDialog();
+            this.Close();
         }
 
         private void btnCerrar_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Hide();
         }
     }
 }
